@@ -24,6 +24,7 @@ package com.microsoft.identity.common.adal.internal.net;
 
 import android.content.Context;
 import android.os.Debug;
+import android.util.Log;
 
 import com.microsoft.identity.common.adal.internal.AuthenticationSettings;
 import com.microsoft.identity.common.exception.ClientException;
@@ -189,6 +190,7 @@ public class HttpWebRequest {
      * @throws ClientException throw network exception
      */
     public static void throwIfNetworkNotAvailable(final Context context) throws ClientException {
+        Log.d("ADAL", "in throwIfNetworkNotAvailable");
 //        final DefaultConnectionService connectionService = new DefaultConnectionService(context);
 //        if (!connectionService.isConnectionAvailable()) {
 //            if (connectionService.isNetworkDisabledFromOptimizations()) {
