@@ -57,10 +57,11 @@ public class DefaultConnectionService implements IConnectionService {
      * @return True if network connection available, false otherwise.
      */
     public boolean isConnectionAvailable() {
-        ConnectivityManager connectivityManager = (ConnectivityManager) mConnectionContext
-                .getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo activeNetwork = connectivityManager.getActiveNetworkInfo();
-        return activeNetwork != null && activeNetwork.isConnectedOrConnecting() && !isNetworkDisabledFromOptimizations();
+        return true;
+//        ConnectivityManager connectivityManager = (ConnectivityManager) mConnectionContext
+//                .getSystemService(Context.CONNECTIVITY_SERVICE);
+//        NetworkInfo activeNetwork = connectivityManager.getActiveNetworkInfo();
+//        return activeNetwork != null && activeNetwork.isConnectedOrConnecting() && !isNetworkDisabledFromOptimizations();
     }
 
     /**
