@@ -189,21 +189,21 @@ public class HttpWebRequest {
      * @throws ClientException throw network exception
      */
     public static void throwIfNetworkNotAvailable(final Context context) throws ClientException {
-        final DefaultConnectionService connectionService = new DefaultConnectionService(context);
-        if (!connectionService.isConnectionAvailable()) {
-            if (connectionService.isNetworkDisabledFromOptimizations()) {
-                final ClientException dozeModeException = new ClientException(
-                        ErrorStrings.NO_NETWORK_CONNECTION_POWER_OPTIMIZATION,
-                        "Connection is not available to refresh token because power optimization is "
-                                + "enabled. And the device is in doze mode or the app is standby");
-                throw dozeModeException;
-            } else {
-                final ClientException generalNetworkException = new ClientException(
-                        ErrorStrings.DEVICE_NETWORK_NOT_AVAILABLE,
-                        "Connection is not available to refresh token");
-                throw generalNetworkException;
-            }
-        }
+//        final DefaultConnectionService connectionService = new DefaultConnectionService(context);
+//        if (!connectionService.isConnectionAvailable()) {
+//            if (connectionService.isNetworkDisabledFromOptimizations()) {
+//                final ClientException dozeModeException = new ClientException(
+//                        ErrorStrings.NO_NETWORK_CONNECTION_POWER_OPTIMIZATION,
+//                        "Connection is not available to refresh token because power optimization is "
+//                                + "enabled. And the device is in doze mode or the app is standby");
+//                throw dozeModeException;
+//            } else {
+//                final ClientException generalNetworkException = new ClientException(
+//                        ErrorStrings.DEVICE_NETWORK_NOT_AVAILABLE,
+//                        "Connection is not available to refresh token");
+//                throw generalNetworkException;
+//            }
+//        }
     }
 
     /**
